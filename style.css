@@ -1,0 +1,286 @@
+/* =========================
+   RESET
+========================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #e5e1da;
+  color: #171715;
+
+  font-family: Arial, Helvetica, sans-serif;
+
+  font-size: 13px;
+  line-height: 1.4;
+
+  -webkit-font-smoothing: antialiased;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+.header {
+  position: fixed;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+
+  padding: 18px 20px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  z-index: 10;
+
+  background: #e5e1da;
+}
+
+.name {
+  font-size: 13px;
+  font-weight: 400;
+}
+
+.contact {
+  display: flex;
+  gap: 25px;
+}
+
+.contact a {
+  transition: opacity 0.2s ease;
+}
+
+.contact a:hover {
+  opacity: 0.45;
+}
+
+/* =========================
+   PROJECTS
+========================= */
+
+.projects {
+  padding: 90px 20px 150px;
+}
+
+/* =========================
+   PROJECT
+========================= */
+
+.project {
+  margin-bottom: 180px;
+}
+
+/* =========================
+   PROJECT GALLERY
+========================= */
+
+.project-gallery {
+  width: 75%;
+  margin: 0;
+
+  display: grid;
+  gap: 12px;
+}
+
+/* =========================
+   FIVE IMAGES
+========================= */
+.five-images {
+  grid-template-columns: repeat(5, 1fr);
+}
+
+/* =========================
+   FOUR IMAGES
+========================= */
+.four-images {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+/* =========================
+   THREE IMAGES
+========================= */
+
+.three-images {
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, span);
+  gap: 10px;
+}
+
+/* =========================
+   TWO IMAGES
+========================= */
+
+.two-images {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+/* =========================
+   SINGLE IMAGE
+========================= */
+
+.one-image {
+  width: 55%;
+
+  grid-template-columns: 1fr;
+}
+
+/* =========================
+   IMAGES
+========================= */
+
+.project-gallery img {
+  display: block;
+
+  width: 100%;
+  height: auto;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 700px) {
+  .project-gallery {
+    width: 100%;
+  }
+
+  .three-images,
+  .two-images {
+    grid-template-columns: 1fr;
+  }
+
+  .one-image {
+    width: 100%;
+  }
+}
+
+/* =========================
+   PROJECT INFO
+========================= */
+
+.project-info {
+  display: grid;
+
+  grid-template-columns:
+    1fr
+    1fr
+    auto;
+
+  gap: 30px;
+
+  padding-top: 24px;
+
+  border-top: 1px solid rgba(23, 23, 21, 0.25);
+}
+
+.project-info h2 {
+  font-size: 14px;
+
+  font-weight: 400;
+
+  line-height: 1.2;
+}
+
+.project-info p {
+  max-width: 320px;
+
+  font-size: 13px;
+
+  line-height: 1.4;
+}
+
+.project-info span {
+  font-size: 11px;
+
+  text-transform: uppercase;
+
+  white-space: nowrap;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+.footer {
+  padding: 20px;
+
+  display: flex;
+  justify-content: space-between;
+
+  border-top: 1px solid rgba(23, 23, 21, 0.25);
+
+  font-size: 11px;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 700px) {
+  .header {
+    padding: 15px;
+  }
+
+  .contact {
+    gap: 12px;
+  }
+
+  .projects {
+    padding: 75px 15px 100px;
+  }
+
+  .project {
+    margin-bottom: 110px;
+  }
+
+  .image {
+    height: 65vh;
+  }
+
+  .project-info {
+    display: block;
+
+    padding-top: 10px;
+  }
+
+  .project-info h2 {
+    margin-bottom: 12px;
+  }
+
+  .project-info p {
+    margin-bottom: 12px;
+  }
+
+  .project-info span {
+    display: block;
+  }
+
+  .footer {
+    padding: 15px;
+
+    gap: 20px;
+
+    flex-direction: column;
+  }
+}
