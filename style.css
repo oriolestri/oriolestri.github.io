@@ -34,6 +34,11 @@ a {
   text-decoration: none;
 }
 
+h2 a:hover {
+  color: orangered;
+  text-decoration: underline;
+}
+
 /* =========================
    HEADER
 ========================= */
@@ -146,14 +151,59 @@ a {
 }
 
 /* =========================
-   IMAGES
+   IMAGES & VIDEOS
 ========================= */
 
-.project-gallery img {
+.project-gallery img,
+.project-gallery video {
   display: block;
-
   width: 100%;
   height: auto;
+}
+
+.video-container {
+  position: relative;
+  width: 100%;
+}
+
+.project-video {
+  cursor: pointer;
+}
+
+/* =========================
+   VIDEO CONTROLS
+========================= */
+
+.video-control {
+  position: absolute;
+  bottom: 30px;
+  left: 30px;
+
+  width: 30px;
+  height: 30px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #000000;
+  border: 1.5px transparent;
+  border-radius: 50%;
+
+  color: #ffffff;
+  cursor: pointer;
+
+  transition: opacity 0.2s ease;
+}
+
+.video-control svg {
+  width: 17px;
+  height: 17px;
+  fill: currentColor;
+}
+
+.video-control:hover {
+  opacity: 0.6;
 }
 
 /* =========================
